@@ -17,18 +17,19 @@ Vue.use(VueRouter);
 Vue.config.productionTip = false
 
 const router = new VueRouter({
-  mode : "history",
-  routes : [
-    { path:"/", redirect:{ name:"todoList" } },
-    { path:"/todos", name:"todoList", component: TodoList },
-    { path:"/todos/add", name:"addTodo", component: AddTodo },
-    { path:"/todos/update/:no", name:"updateTodo", component: UpdateTodo },
-  ]
+    mode: "history",
+    routes: [
+        { path: "/", redirect: { name: "todoList" } },
+        { path: "/todos", name: "todoList", component: TodoList },
+        { path: "/todos/add", name: "addTodo", component: AddTodo },
+        { path: "/todos/update/:no", name: "updateTodo", component: UpdateTodo },
+        { path: "/api/todos/add", name: "apiAddTodo", component: AddTodo }
+    ]
 })
 
 
 new Vue({
-  store,
-  router,
-  render: h => h(App),
+    store,
+    router,
+    render: h => h(App),
 }).$mount('#app')

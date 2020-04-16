@@ -36,6 +36,7 @@ export default {
         });
 
         const addTodo = () => {
+          console.log(Constant.ADD_TODO)
             store.dispatch(Constant.ADD_TODO, { todoitem : state.todoitemlocal })
             router.push({ name:"todoList" });
         }
